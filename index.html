@@ -51,19 +51,46 @@
   </div>
 </div>
 </div>
+ </br>
+    </br>
 
- <form id="player-form">
-    <!-- Button triggers new player to be added -->
-       <input type="text" class="center-block text"  id="player-input"><br />
-       <input id="add-player" class="button btn-lg center-block" type="submit" value="Add your favorite Nats Player">
-    </form>
+<form class="text-center" id="team-form">
+ 
+  <div >
+     <label for="party">Name:</label>
+     <input type="text" id="teamname" disabled>
+     </br>
+    <label for="party">From Date:</label>
+    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required>
+    </br>
+    </br>
+    <label for="party">To Date:</label>
+    <input type="date" id="enddate" name="party" min="2017-09-28" max="2017-04-20" required>
+    <span class="validity"></span>
+  </div>
+
+  <select  name="food type">
+    <option value="chinese">Chinese</option>
+    <option value="mexican">Mexican</option>
+    <option value="american">American</option>
+    <option value="italian">Italian</option>
+  </select>
+  </div>
+  <br><br>
+  <input id="find-games" class="button btn-lg center-block" type="submit" value="Find Games">
+</form>
+
+<!-- Games will Get Dumped here -->
+    <div id="game-view" class="flex-container wrap" ></div>
+
+
   <!-- JQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
  <!-- Javascript Game Logic -->
- <script type="text/javascript" src="assets/js/project1.js"></script>
+ <script type="text/javascript" src="assets/js/project2.js"></script>
 
 </body>
  
