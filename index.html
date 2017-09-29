@@ -5,11 +5,12 @@
   	<meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Linking Bootstrap  -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  
+    
   <!-- Linking CSS -->
 	<link rel="stylesheet" type="text/css" href="assets\css\reset.css">
 	<link rel="stylesheet" type="text/css" href="assets\css\style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
 </head>
 <html>
 <body>
@@ -52,16 +53,48 @@
 </div>
 </div>
 
- <form id="player-form">
-    <!-- Button triggers new player to be added -->
-       <input type="text" class="center-block text"  id="player-input"><br />
-       <input id="add-player" class="button btn-lg center-block" type="submit" value="Add your favorite Nats Player">
-    </form>
+ </br>
+ </br>
+
+<form>
+  <div>
+    <label for="party">From:</label>
+    <input type="date" id="party" name="party" min="2017-09-28" max="2017-04-20" required>
+    </br>
+    </br>
+    <label for="party">To:</label>
+    <input type="date" id="party" name="party" min="2017-09-28" max="2017-04-20" required>
+    <span class="validity"></span>
+  </div>
+  <select name="food type">
+    <option value="chinese">Chinese</option>
+    <option value="mexican">Mexican</option>
+    <option value="american">American</option>
+    <option value="italian">Italian</option>
+  </select>
+  <br><br>
+Need Tickets?
+  <input type="radio" name="buttons" value="yes" /> Yes
+  <input type="radio" name="buttons" value="no" /> No
+  <br><br>
+  <input type="submit">
+</form>
   <!-- JQuery -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- 
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
+
+<!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <script
+  src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
  <!-- Javascript Game Logic -->
  <script type="text/javascript" src="assets/js/project1.js"></script>
 

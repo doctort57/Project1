@@ -7,9 +7,9 @@ $(document).ready(function() {
                   "New York Yankees","Philadelphia Phillies","San Diego Padres","Seattle Mariners",
                   "St Louis Cardinals"];
 
-  var basketball = ["Chicago Sky","Connecticut Sun","Indiana Fever","Los Angeles Sparks",
-                    "Minnesota Lynx","New York Liberty","Phoenix Mercury","Seattle Storm",
-                    "Washington Mystics"];
+  var basketball = ["Atlanta Hawks","Boston Celtics","Brooklyn Nets","Charlotte Hornets",
+                    "Chicago Bulls","Cleveland Cavaliers","Dallas Mavericks","Denver Nuggets",
+                    "Detroit Pistons"];
 
   var br = "<br />";
  
@@ -41,6 +41,12 @@ $(document).ready(function() {
       $("#basketball").append(a);
       $("#basketball").append(br); 
   }
+/*
+     $( function() {
+       $( "#text-yui_3_10_1_1_1373799396053_43125-field" ).datepicker({ dateFormat: 'dd/mm/yy' });
+       $( "#text-yui_3_10_1_1_1373799396053_48604-field" ).datepicker({ dateFormat: 'dd/mm/yy' });
+     });
+*/      
 
   // 1. Initialize Firebase
 
@@ -59,7 +65,7 @@ $(document).ready(function() {
 
   var database = firebase.database();               
            
-
+/*
 // First AJAX call to mysportsfeed api to return game data
 
 // some arugment here to capture inout team
@@ -117,7 +123,7 @@ $(document).ready(function() {
 
   }
 });
-
+*/
  
  
  
@@ -179,12 +185,13 @@ $(document).ready(function() {
 
 // 2. Button for submitting form
 
-/* $("#add-player").on("click", function(event) {
+ $("#teamform").on("click", function(event) {
   event.preventDefault();
   // Grabs user input
-  playerName = $("#player-input").val().trim();
+  var startdate = $("#startdate").val().trim();
+  console.log(startdate);
   // CALL VALIDATE FUNCTION
-
+  /*
   $("#"+player).append(playerName);
   
   $("#"+player).append(p);
@@ -197,8 +204,9 @@ $(document).ready(function() {
       ties:0,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
+    */
   	//   do your append stuff 
- } */
+ });
  
 
 /*    function validate() {
