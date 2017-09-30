@@ -20,13 +20,10 @@
                   "New York Yankees","Philadelphia Phillies","San Diego Padres","Seattle Mariners",
                   "St Louis Cardinals"];
 
+  var basketball = ["Chicago Sky","Connecticut Sun","Indiana Fever","Los Angeles Sparks",
+                    "Minnesota Lynx","New York Liberty","Phoenix Mercury","Seattle Storm",
+                    "Washington Mystics"];
 
-  var basketball = ["Atlanta Hawks","Boston Celtics","Brooklyn Nets","Charlotte Hornets",
-                    "Chicago Bulls","Cleveland Cavaliers","Dallas Mavericks","Denver Nuggets",
-                    "Detroit Pistons"];
-
-
- 
   var br = "<br />";
  
   for (var i = 0; i < football.teams.length; i++) { 
@@ -57,15 +54,7 @@
       $("#basketball").append(a);
       $("#basketball").append(br); 
   }
-/*
-     $( function() {
-       $( "#text-yui_3_10_1_1_1373799396053_43125-field" ).datepicker({ dateFormat: 'dd/mm/yy' });
-       $( "#text-yui_3_10_1_1_1373799396053_48604-field" ).datepicker({ dateFormat: 'dd/mm/yy' });
-     });
-*/      
-console.log(projectform);
-console.log(fromdate);
-console.log(dateadded);
+
   // 1. Initialize Firebase
 
   var config = {
@@ -81,57 +70,54 @@ console.log(dateadded);
       firebase.initializeApp(config);
   }
 
-<<<<<<< HEAD
-  var database = firebase.database();               
-           
-/*
-// First AJAX call to mysportsfeed api to return game data
-=======
-  var database = firebase.database();
->>>>>>> 8fc679aec99ef4f784eb5de163d8c6bd1ed9c1ef
+  var database = firebase.database(); 
 
-  //when team clicked, show form
-
-  function setTeam() {
-  
-       $("#team-form").show();
-        $("#teamname").val($(this).text());
-             
+  function setFocus() {
+ 
+      var team = $(this).text();
+      $("#teamname").text(team).
+      console.log(team);            
   };
 
-  // submit form for VALAIDATION 
+ 
+ //     $("#find-games").on("click", function(event) {};
+   
 
-  $("#find-games").on("click", function(event) {
-     event.preventDefault();
-  // Grabs user input
-     var team =    $("#teamname").val().trim();
-     var startDate =  $("#startdate").val().trim();
-     var endDate =  $("#enddate").val().trim();
-     // call validation function
+// First AJAX call to mysportsfeed api to return game data
 
-     // IF SUCESSFUL THAN DO AJAX CALL FOR GAMES
-     // dates need to be in YYYYMMDD format for AJAX call 
-     var date1 = 20170928;
-     var date2 = 20171130;
-     var abbr = "";
-     // this will get the corresponding city abbr from the list object to be appended to the ajax url 
-     for(key in list){
-        if (key == team) {
-            abbr = (list[key]);
-        }
-      }
+// some arugment here to capture inout team
+// get date range from input form here
+  var date1 = 20170928;
+  var date2 = 20171130;
 
-      // this will be the string for the url for the date range chosen
-      var gamedates = "from-" + date1.toString() + "-to-" + date2.toString();
+  var team = "New England Patriots";
+  var abbr = "";
 
-       $.ajax
-      ({
-        type: "GET",
-        url: "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/full_game_schedule.json?team=" + abbr + "&date=" + gamedates,
-        dataType: 'json',
-        headers: {
-          "Authorization": "Basic " + btoa('doctort57' + ':' + 'Rowanp1996' )
-      },
+for(key in list){
+   if (key == team) {
+ 
+    abbr = (list[key]);
+  }
+}
+
+  var gamedates = "from-" + date1.toString() + "-to-" + date2.toString();
+  console.log(abbr);
+  var url =  "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/full_game_schedule.json?team=" + abbr + "?date=" + gamedates
+  console.log(url);
+
+
+ // https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/full_game_schedule.json?team=GB&date=since-20170928
+
+  $.ajax
+({
+  type: "GET",
+  url: "https://api.mysportsfeeds.com/v1.1/pull/nfl/2017-regular/full_game_schedule.json?team=" + abbr + "&date=" + gamedates,
+  dataType: 'json',
+  headers: {
+ "Authorization": "Basic " + btoa('doctort57' + ':' + 'Rowanp1996' )
+
+
+},
   
   success: function (data){
       //    console.log(JSON.stringify(data));
@@ -139,36 +125,51 @@ console.log(dateadded);
           var results = (JSON.stringify(data));
  
          for (var i = 0; i < data.fullgameschedule.gameentry.length; i++) {
-                var away = data.fullgameschedule.gameentry[i].awayTeam.City;
-                 console.log(away);
-                var home = data.fullgameschedule.gameentry[i].homeTeam.City;
-                console.log(home);
-                var location = data.fullgameschedule.gameentry[i].location;
-                console.log(location);
-                var gamedate = data.fullgameschedule.gameentry[i].date;
-                console.log(gamedate);
-                var gamedate = data.fullgameschedule.gameentry[i].time;
-                console.log(gamedate);
+
+       /*         var city = data.fullgameschedule.gameentry[i].id;
+                console.log(city);
+                city = data.fullgameschedule.gameentry[i].homeTeam.City;
+                console.log(city); */
 
 
            }
 
   }
-
+  }
 });
-<<<<<<< HEAD
+
+/*
+
+  $.ajax
+({
+  type: "GET",
+  url: "https://maps.googleapis.com/maps/api/place/textsearch/json?query=Restaurants+near+Giants+Stadium&key=AIzaSyC8JKgphcG7Jl21ZxUysApl3s6e38nTplc",
+  dataType: 'json',
+  
+
+  success: function (data){
+    //    console.log(JSON.stringify(data));
+     // get response data into var
+         
+ 
+           
+
+               
+                var city = data.results[0].formatted_address;
+                console.log(city);
+
+
+  }
+});
 */
  
  
- 
-=======
 
->>>>>>> 8fc679aec99ef4f784eb5de163d8c6bd1ed9c1ef
+  
 
+// At the initial load and on subsequent data value changes, get a snapshot of the current data. (I.E FIREBASE HERE)
+// This callback keeps the page updated when a value changes in firebase.
 
-  });
-
-<<<<<<< HEAD
 /* database.ref().on("value", function(snapshot) {
  
 
@@ -221,13 +222,12 @@ console.log(dateadded);
 
 // 2. Button for submitting form
 
- $("#teamform").on("click", function(event) {
+/* $("#add-player").on("click", function(event) {
   event.preventDefault();
   // Grabs user input
-  var startdate = $("#startdate").val().trim();
-  console.log(startdate);
+  playerName = $("#player-input").val().trim();
   // CALL VALIDATE FUNCTION
-  /*
+
   $("#"+player).append(playerName);
   
   $("#"+player).append(p);
@@ -240,9 +240,8 @@ console.log(dateadded);
       ties:0,
       dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
-    */
   	//   do your append stuff 
- });
+ } */
  
 
 /*    function validate() {
@@ -266,13 +265,11 @@ console.log(dateadded);
 
 // ADD LISTENERS FOR ONLICK events for team selection and form submission	if needed
 
+  $(document).on("click", ".player1", setFocus);
+
 	$(document).on("click", ".somefield", somefunction);
   	$(document).on("click", ".somefield", somefunction); */
-});
-=======
-  $("#team-form").hide();
->>>>>>> 8fc679aec99ef4f784eb5de163d8c6bd1ed9c1ef
 
- $(document).on("click", ".dropdown-item", setTeam);
 
-  }); 
+
+

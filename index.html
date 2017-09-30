@@ -52,6 +52,39 @@
   </div>
 </div>
 </div>
+ </br>
+    </br>
+
+<form class="text-center" id="team-form">
+ 
+  <div >
+     <label for="party">Name:</label>
+     <input type="text" id="teamname" disabled>
+     </br>
+    <label for="party">From Date:</label>
+    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required>
+    </br>
+    </br>
+    <label for="party">To Date:</label>
+    <input type="date" id="enddate" name="party" min="2017-09-28" max="2017-04-20" required>
+    <span class="validity"></span>
+  </div>
+
+  <select  name="food type">
+    <option value="chinese">Chinese</option>
+    <option value="mexican">Mexican</option>
+    <option value="american">American</option>
+    <option value="italian">Italian</option>
+  </select>
+  </div>
+  <br><br>
+  <input id="find-games" class="button btn-lg center-block" type="submit" value="Find Games">
+</form>
+
+<!-- Games will Get Dumped here -->
+    <div id="game-view" class="flex-container wrap" ></div>
+
+
 
  </br>
  </br>
@@ -82,6 +115,7 @@ Need Tickets?
   <br><br>
   <input type="submit">
 </form>
+
   <!-- JQuery -->
   <script
   src="https://code.jquery.com/jquery-3.2.1.js"
