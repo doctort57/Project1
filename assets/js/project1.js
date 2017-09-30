@@ -47,7 +47,9 @@ $(document).ready(function() {
        $( "#text-yui_3_10_1_1_1373799396053_48604-field" ).datepicker({ dateFormat: 'dd/mm/yy' });
      });
 */      
-
+console.log(projectform);
+console.log(fromdate);
+console.log(dateadded);
   // 1. Initialize Firebase
 
   var config = {

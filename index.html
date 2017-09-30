@@ -56,15 +56,18 @@
  </br>
  </br>
 
-<form>
+<form id="projectform">
   <div>
-    <label for="party">From:</label>
-    <input type="date" id="party" name="party" min="2017-09-28" max="2017-04-20" required>
+    <label id="fromdate" for="party">From:</label>
+    <input id="dateadded" type="date" id="party" name="party" min="2017-09-28" max="2020-04-20" required>
     </br>
     </br>
     <label for="party">To:</label>
-    <input type="date" id="party" name="party" min="2017-09-28" max="2017-04-20" required>
+    <input type="date" id="party" name="party" min="2017-09-28" max="2020-04-20" required>
     <span class="validity"></span>
+  </div>
+  <div>
+    <input type="submit">
   </div>
   <select name="food type">
     <option value="chinese">Chinese</option>
