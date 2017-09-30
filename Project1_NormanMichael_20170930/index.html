@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Linking Bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    
+  <!-- Linking CSS -->
+	<link rel="stylesheet" type="text/css" href="assets\css\reset.css"> 
+
+
+	<link rel="stylesheet" type="text/css" href="assets\css\style.css">
+
+</head>
+<html>
+<body>
+  <header>
+    
+  </header>
+<h2 class="text-center">Pick Your Team</h2>
+<div class="text-center">
+<div class="btn-group " role="group" aria-label="Button group with nested dropdown">
+ 
+
+   <div class="btn-group " role="group">
+    <button id="btnGroupDrop1" type="button" class="btn-lg btn-primary dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      NFL
+    </button>
+
+    <div id="football" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      
+
+    </div>
+  </div>
+
+   <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn-lg btn-danger dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+     MLB
+    </button>
+
+    <div id="baseball" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+    </div>
+  </div>
+
+  <div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn-lg btn-success dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      WNBA
+    </button>
+    <div id="basketball" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     
+    </div>
+  </div>
+</div>
+</div>
+ </br>
+    </br>
+
+<form class="text-center" id="team-form">
+ 
+  <div >
+     <label for="party">Name:</label>
+     <input type="text" id="teamname" disabled>
+     </br>
+    <label for="party">From Date:</label>
+    <!-- from David
+    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required> -->
+    <input type="date" id="startdate" name="party" required>
+    </br>
+    </br>
+    <label for="party">To Date:</label>
+    <!-- From David
+    <input type="date" id="enddate" name="party" min="2017-09-28" max="2017-04-20" required>
+    -->
+    <input type="date" id="enddate" name="party" required>
+    <span class="validity"></span>
+  </div>
+
+  <select  name="food type">
+    <option value="chinese">Chinese</option>
+    <option value="mexican">Mexican</option>
+    <option value="american">American</option>
+    <option value="italian">Italian</option>
+  </select>
+  </div>
+  <br><br>
+  <input id="find-games" class="button btn-lg center-block" type="submit" value="Find Games">
+</form>
+
+<!-- Games will Get Dumped here -->
+    <div id="game-view" class="flex-container wrap" ></div>
+
+
+  <!-- JQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+ <!-- Javascript Game Logic -->
+ <script type="text/javascript" src="assets/js/project1.js"></script> 
+
+</body>
+ 
+</html>
+
