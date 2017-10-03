@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Linking Bootstrap  -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    
   <!-- Linking CSS -->
-	<link rel="stylesheet" type="text/css" href="assets\css\reset.css">
-	<link rel="stylesheet" type="text/css" href="assets\css\style.css">
+  <link rel="stylesheet" type="text/css" href="assets\css\reset.css"> 
+
+
+  <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+
 </head>
 <html>
 <body>
@@ -61,11 +66,16 @@
      <input type="text" id="teamname" disabled>
      </br>
     <label for="party">From Date:</label>
-    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required>
+    <!-- from David
+    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required> -->
+    <input type="date" id="startdate" name="party" required>
     </br>
     </br>
     <label for="party">To Date:</label>
+    <!-- From David
     <input type="date" id="enddate" name="party" min="2017-09-28" max="2017-04-20" required>
+    -->
+    <input type="date" id="enddate" name="party" required>
     <span class="validity"></span>
   </div>
 
@@ -83,6 +93,11 @@
 <!-- Games will Get Dumped here -->
     <div id="game-view" class="flex-container wrap" ></div>
 
+    <!-- Games will Get Dumped here -->
+    <div id="food-view" class="flex-container wrap center-block" ></div>
+
+    <table id="game-table"></table>
+
 
   <!-- JQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -90,9 +105,10 @@
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
 
  <!-- Javascript Game Logic -->
- <script type="text/javascript" src="assets/js/project1.js"></script>
+ <script type="text/javascript" src="assets/js/project1.js"></script> 
+
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </body>
  
 </html>
-

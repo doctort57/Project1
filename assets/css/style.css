@@ -1,6 +1,6 @@
 body {
 		border: 1px solid #dddddd ;
-		background-image: url(../images/concrete-texture.png); 
+		background-image: url(../images/concrete-texture.png);
  }	
 
 .dropdown-menu {
@@ -11,4 +11,14 @@ body {
 
 .btn-width {
 	width: 200px;
+}
+
+
+/* Added Sept 30, 2017 */
+
+.divHorizontal{
+	display: inline-block;
+	width: 18%;
+	margin-top: 10px;
+	border-bottom: 1px solid black;
 }
