@@ -3,8 +3,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!-- Linking Bootstrap  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+         
 
   <!-- Firebase Reference -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
@@ -15,99 +18,86 @@
 
   <link rel="stylesheet" type="text/css" href="assets\css\style.css">
 
+
+      </script>  
+
 </head>
 <html>
 <body>
   <header>
     
   </header>
-<h2 class="text-center">Pick Your Team</h2>
-<div class="text-center">
-<div class="btn-group " role="group" aria-label="Button group with nested dropdown">
- 
+      <h1 class="container text-center">Pick Your Team</h1>
 
-   <div class="btn-group " role="group">
-    <button id="btnGroupDrop1" type="button" class="btn-lg btn-primary dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      NFL
-    </button>
+      <!-- buttons for sport choice -->
 
-    <div id="football" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      
+      <div class="text-center">
 
+          <div class="btn-group " role="group">
+              <button id="football" type="button" class="btn-lg btn-danger btn-width" >NFL</button>
+          </div>
+
+           <div class="btn-group " role="group">
+              <button id="basketball" type="button" class="btn-lg btn-primary btn-width" >NBA</button>
+          </div>
+      </div>
+      </br></br>
+
+      <!-- Team form with dates -->
+      <div id="team-form" class="container box wrap text-center" ></div>
+
+      <!-- Games will Get Dumped here -->
+    <div id="game-view" class="flex-container wrap center-block" ></div>
+    <table id="games-table" class = "table gamesbox table-bordered table-striped responsive">
+     <tbody></tbody> 
+
+    </table>
+
+    <!-- Games Table will Get Dumped here -->
+    <div id="food-view" class="flex-container box wrap center-block" ></div>
+
+    <table id="game-table" class = "table tablebox table-striped responsive">
+     <tbody></tbody> 
+
+    </table>
+
+
+    <div class="modal fade" id="myModal_1" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+             Date Validation
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Date Error</h4>
+          </div>
+          <div class="modal-body" >
+            <p id="daterr">Error: Start Date greater than End Date.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close Me</button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-   <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn-lg btn-danger dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-     MLB
-    </button>
-
-    <div id="baseball" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-    </div>
-  </div>
-
-  <div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn-lg btn-success dropdown-toggle btn-width" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      WNBA
-    </button>
-    <div id="basketball" class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-     
-    </div>
-  </div>
-</div>
-</div>
- </br>
-    </br>
-
-<form class="text-center" id="team-form">
- 
-  <div >
-     <label for="party">Name:</label>
-     <input type="text" id="teamname" disabled>
-     </br>
-    <label for="party">From Date:</label>
-    <!-- from David
-    <input type="date" id="startdate" name="party" min="2017-09-28" max="2017-04-20" required> -->
-    <input type="date" id="startdate" name="party" required>
-    </br>
-    </br>
-    <label for="party">To Date:</label>
-    <!-- From David
-    <input type="date" id="enddate" name="party" min="2017-09-28" max="2017-04-20" required>
-    -->
-    <input type="date" id="enddate" name="party" required>
-    <span class="validity"></span>
-  </div>
-
-  <select  name="food type">
-    <option value="chinese">Chinese</option>
-    <option value="mexican">Mexican</option>
-    <option value="american">American</option>
-    <option value="italian">Italian</option>
-  </select>
-  </div>
-  <br><br>
-  <input id="find-games" class="button btn-lg center-block" type="submit" value="Find Games">
-</form>
-
-<!-- Games will Get Dumped here -->
-    <div id="game-view" class="flex-container wrap" ></div>
-
-    <!-- Games will Get Dumped here -->
-    <div id="food-view" class="flex-container wrap center-block" ></div>
-
-    <table id="game-table"></table>
 
 
   <!-- JQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+ 
 
  <!-- Javascript Game Logic -->
  <script type="text/javascript" src="assets/js/project1.js"></script> 
 
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <script type = "text/javascript"
+         src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>           
+      <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
+      </script>  
+
+  
 
 </body>
  
