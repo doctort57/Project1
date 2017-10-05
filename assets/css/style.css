@@ -22,7 +22,7 @@ th{
 	width: 200px;
 }
 
-tbody{
+.tbody{
   overflow-y: scroll;      
   height: 400px;            //  <-- Select the height of the body
   width: 100%;
@@ -133,6 +133,14 @@ p{
   color: black;
   text-align: center; 
   font-family: 'Arial', Times, Times New Roman, serif;
+}
+
+h2{
+    color: navy;
+        font-size: 24px;
+        font-weight: bolder;
+        font-family: 'Arial', Times, Times New Roman, serif;
+        text-align: center;
 }
 
 h2{

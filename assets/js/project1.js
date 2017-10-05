@@ -50,17 +50,18 @@
   var database = firebase.database();
   // this fires after cild added returns all data on initial load and new data when rows are added
       database.ref().on("value", function(snapshot) {
-                           
+                 console.log(snapshot);         
                snapshot.forEach(function(childSnapshot) {
                   var childData = childSnapshot.val();
-                                
+                    console.log(childData);                 
                   var markup = "<tr><td>" + childData.game + "</td></tr>";
                   markup = markup + "<tr><td>" + childData.restaurant + "</td></tr><br />";
                   markup = markup + "<tr><td>" + childData.hotel + "</td></tr>";
                   markup = markup + "<tr><td >" + childData.venue + "</td></tr>";
                   markup = markup + "<tr><td ></td></tr>";
                   markup = markup + "<tr></tr>";
-                  $("#game-table").prepend(markup);
+                $("#game-table").empty();
+                  $("#game-table").append(markup);
                  });
 
       
@@ -434,7 +435,7 @@
 
      
           if (startDate < todayDate) {
-              errMsg = "Start Date must be greater the End Date";
+              errMsg = "Start Date must be greater than Today's Date";
               return errMsg;
           }
 
